@@ -20,6 +20,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'font-awesome-sass', '~> 4.7.0'
+gem 'bootstrap-sass-extras', '~> 0.0.2'
+gem 'devise', '~> 4.2'
 
 
 group :development, :test do
