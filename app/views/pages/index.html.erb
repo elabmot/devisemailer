@@ -139,9 +139,11 @@ ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
  </div>
  <!-- Side Widget Well -->
  <div class="well">
- <h4>Side Widget Well</h4>
- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci
-accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+ <h4>Recent Posts</h4>
+   <% @articles.each do |article| %>
+   <h2><%= link_to article.title, article %></h2>
+   <p><%= truncate(article.body, length: 120) %></P>
+   <% end %>
  </div>
  </div>
 </div>
