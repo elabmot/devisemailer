@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Created By:</strong>
+  <%= @article.user.username unless @article.user.blank? %>
+</p>
+
+<p>
   <strong>Body:</strong>
   <%= @article.body %>
 </p>
