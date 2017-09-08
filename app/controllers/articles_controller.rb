@@ -5,12 +5,14 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.all.paginate(page: params[:page], per_page: 5)
+    @articles_recent = Article.last(4)
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @comments = Comment.all
   end
 
   # GET /articles/new
